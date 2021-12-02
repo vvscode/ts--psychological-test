@@ -8,6 +8,7 @@ module.exports = {
     "next/core-web-vitals",
     "plugin:react/recommended",
     "airbnb",
+    "plugin:cypress/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",
@@ -22,5 +23,16 @@ module.exports = {
   rules: {
     "react/react-in-jsx-scope": "off",
     "react/jsx-filename-extension": ["error", { extensions: [".tsx"] }],
+    "jest/expect-expect": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        js: "never",
+        jsx: "never",
+        ts: "never",
+        tsx: "never",
+      },
+    ],
   },
 };
