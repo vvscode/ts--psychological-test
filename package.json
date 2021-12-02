@@ -6,8 +6,11 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "prepare": "husky install"
-  },
+    "prepare": "husky install",
+    "cypress": "cypress open",
+    "cypress:headless": "cypress run",
+    "e2e": "start-server-and-test start http://localhost:3000 cypress",
+    "test:headless": "next build && start-server-and-test start http://localhost:3000 cypress:headless"  },
   "dependencies": {
     "next": "12.0.4",
     "react": "17.0.2",
@@ -18,6 +21,7 @@
     "@types/react": "17.0.37",
     "@typescript-eslint/eslint-plugin": "^5.5.0",
     "@typescript-eslint/parser": "^5.5.0",
+    "cypress": "^9.1.0",
     "eslint": "^8.3.0",
     "eslint-config-airbnb": "^19.0.1",
     "eslint-config-next": "12.0.4",
@@ -29,7 +33,8 @@
     "husky": ">=6",
     "lint-staged": ">=10",
     "prettier": "^2.5.0",
-    "typescript": "4.5.2"
+    "start-server-and-test": "^1.14.0",
+    "typescript": "^4.5.2"
   },
   "lint-staged": {
     "*.js": "eslint --cache --fix",
