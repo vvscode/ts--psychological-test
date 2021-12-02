@@ -16,3 +16,8 @@ jobs:
       - name: Lint
         run: |
           yarn lint
+
+      - name: e2e
+        run: |
+          yarn build
+          yarn test:headless
