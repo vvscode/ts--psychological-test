@@ -1,9 +1,9 @@
-describe('Application', () => {
+describe("Application", () => {
   beforeEach(() => {
-    cy.visit('/')
+    cy.visit("/");
   });
 
-  it('has proper title', () => {
-    cy.get('title').contains('Psychological test')
-  })
-})
+  it("has proper title", () => {
+    cy.get("title").contains("Psychological test");
+  });
+});
