@@ -17,6 +17,8 @@ jobs:
         run: |
           yarn lint
 
+      - uses: microsoft/playwright-github-action@v1
+
       - name: e2e
         run: |
           yarn build
