@@ -25,6 +25,7 @@ jobs:
       - name: e2e
         run: |
           yarn build
+          npx playwright install
           DEBUG=pw:api yarn test:headless
 
       - uses: actions/upload-artifact@v2
