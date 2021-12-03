@@ -21,3 +21,9 @@ jobs:
         run: |
           yarn build
           yarn test:headless
+
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: playwright-test-report
+          path: playwright-report/
