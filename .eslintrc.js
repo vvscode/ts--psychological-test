@@ -33,5 +33,7 @@ module.exports = {
         tsx: "never",
       },
     ],
+    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "import/prefer-default-export": "off",
   },
 };
