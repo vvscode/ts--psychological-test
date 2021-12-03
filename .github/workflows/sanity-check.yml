@@ -6,8 +6,11 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses:  actions/checkout@v2
+      
+      - uses: actions/setup-node@v1
+    
+      - uses: microsoft/playwright-github-action@v1
 
       - name: Install Packages
         run: |
@@ -19,8 +22,6 @@ jobs:
 
       - name: e2e
         run: |
-          npx playwright install-deps
-          
           yarn build
           yarn test:headless
 
