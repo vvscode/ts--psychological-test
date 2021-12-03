@@ -34,5 +34,6 @@ module.exports = {
       },
     ],
     "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
+    "import/prefer-default-export": "off",
   },
 };
