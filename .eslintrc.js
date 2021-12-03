@@ -8,7 +8,6 @@ module.exports = {
     "next/core-web-vitals",
     "plugin:react/recommended",
     "airbnb",
-    "plugin:cypress/recommended",
     "prettier",
   ],
   parser: "@typescript-eslint/parser",

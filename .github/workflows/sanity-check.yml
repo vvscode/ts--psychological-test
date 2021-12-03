@@ -6,8 +6,11 @@ jobs:
   lint:
     runs-on: ubuntu-20.04
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses:  actions/checkout@v2
+      
+      - uses: actions/setup-node@v1
+        with:
+          node-version: '14'
 
       - name: Install Packages
         run: |
@@ -20,4 +23,11 @@ jobs:
       - name: e2e
         run: |
           yarn build
-          yarn test:headless
+          npx playwright install
+          DEBUG=pw:api yarn test:headless
+
+      - uses: actions/upload-artifact@v2
+        if: always()
+        with:
+          name: playwright-test-report
+          path: playwright-report/

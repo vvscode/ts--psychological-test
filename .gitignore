@@ -19,6 +19,7 @@
 .DS_Store
 *.pem
 .eslintcache
+playwright-report
 
 # debug
 npm-debug.log*
@@ -36,3 +37,5 @@ yarn-error.log*
 
 # typescript
 *.tsbuildinfo
+test-results/
+playwright-report/
