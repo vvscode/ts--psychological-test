@@ -33,7 +33,13 @@ module.exports = {
         tsx: "never",
       },
     ],
-    "no-unused-vars": ["error", { argsIgnorePattern: "^_" }],
     "import/prefer-default-export": "off",
+
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2621
+    "no-unused-vars": "off",
+    "@typescript-eslint/no-unused-vars": "error",
+    // https://github.com/typescript-eslint/typescript-eslint/issues/2483
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
   },
 };
