@@ -1,7 +1,7 @@
 import type { NextPage } from "next";
 import React from "react";
 import { Navbar } from "../components/Navbar";
-import { useQuizData } from "../utils/client/useQuizData";
+import { QUIZ_STATE, useQuizData } from "../utils/client/useQuizData";
 import { QuestionCard } from "../components/QuestionCard";
 
 const TakeTest: NextPage = function TakeTest() {
@@ -18,7 +18,9 @@ const TakeTest: NextPage = function TakeTest() {
   return (
     <>
       <Navbar />
-      {quizState === "LOADING" ? <p aria-busy="true">Loading...</p> : null}
+      {quizState === QUIZ_STATE.LOADING ? (
+        <p aria-busy="true">Loading...</p>
+      ) : null}
 
       {nextQuestion ? (
         <>
