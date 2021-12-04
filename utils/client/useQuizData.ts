@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { getQuizData, getQuizResult } from "./quizApi";
 
-enum QUIZ_STATE {
+export enum QUIZ_STATE {
   LOADING = "LOADING",
   LOADED = "LOADED",
   IN_PROGRESS = "IN_PROGRESS",
