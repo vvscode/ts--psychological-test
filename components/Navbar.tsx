@@ -17,7 +17,7 @@ export const Navbar = function Navbar() {
           <li>
             <Link href={link}>
               {/* eslint-disable-next-line jsx-a11y/anchor-is-valid -- nextjs specific thing */}
-              <a>
+              <a title={title} className="qa-NavbarLink">
                 {router.pathname === link ? <strong>{title}</strong> : title}
               </a>
             </Link>

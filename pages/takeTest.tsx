@@ -33,7 +33,7 @@ const TakeTest: NextPage = function TakeTest() {
 
       {quizResult ? (
         <>
-          <p>{quizResult}</p>
+          <p role="note">{quizResult}</p>
           <button onClick={retakeTest} type="button">
             Retake
           </button>
